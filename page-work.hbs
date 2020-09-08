@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+
+{{> "post-title"}}
+
+{{{content}}}
+
+{{/post}}
+
+{{#get "posts" filter="primary_tag:work" include="tags" limit="8"}}
+  {{#foreach posts}}
+    <a href="{{url absolute=true}}" class="customer" data-aos="fade-up">
+      <img
+        srcset="{{img_url feature_image size="grid"}} 416w,
+                {{img_url feature_image size="responsive"}} 768w"
+        src="{{img_url feature_image}}" class="customer__poster"
+        alt="{{title}}">
+      <div>{{title}}</div>
+    </a>
+  {{/foreach}}
+{{/get}}

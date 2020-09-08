@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta_title }}</title>
+  {{ghost_head}}
+  <link rel="stylesheet" href="{{ asset "/css/styles.css" }}">
+  <script src="{{ asset "/js/aos.js" }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbzcIXmPvUh4voaIoCbmdws2HVZROADfA" defer></script>
+</head>
+<body class="{{body_class}}">
+  <header class="header">
+    <a href="{{@site.url}}" class="muted-link">
+      <img src="{{@site.logo}}" alt="JC Development" width="190" class="logo">
+    </a>
+  </header>
+  <div class="wrapper">
+    <main class="main">
+      {{{body}}}
+    </main>
+  </div>
+  {{navigation}}
+  <footer class="footer">
+    <div class="footer__left">
+      <address>
+        JC Development AG<br>
+        Buchholzstrasse 50<br>
+        8750 Glarus<br>
+        Schweiz
+      </address><br>
+      <a href="mailto:office@jcd.swiss" target="_blank" class="footer__link">office@jcd.swiss</a><br>
+      <a href="tel:+41556456278" class="footer__link">+41 (0) 55 645 62 78</a>
+    </div>
+    <div class="footer__right">
+      JC Development ist eine Philosophie. Wir haben es uns zur Aufgabe gemacht Planungsprozesse unserer Kunden zu optimieren. Wenn die ganze Welt von BIM spricht – wir gehen einen Schritt weiter. Mit unseren digitalen Tools planen Sie in Stunden was früher Tage dauerte. Wir verbinden CAD mit ERP, konstruieren automatisch aus einfachen Rastern und Textdateien und setzen auf Industrie 4.0.
+    </div>
+    <div class="footer__cookie">
+      Diese Seite verwendet keine Cookies.
+    </div>
+  </footer>
+  <script>
+    AOS.init();
+  </script>
+
+  {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+  {{ghost_foot}}
+</body>
+</html>
