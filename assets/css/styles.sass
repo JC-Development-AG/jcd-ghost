@@ -25,6 +25,7 @@
 
 $background: #fff
 $color: #44515C
+$accent: #265278
 $white: #fff
 $black: #000
 $space-xs: 4px
@@ -126,6 +127,7 @@ img
 
 figure
   margin: 0
+  text-align: center
 
 .headline
   margin: $space-lg 0
@@ -156,6 +158,7 @@ figure
   right: 0
   text-align: right
   padding: $space-mdp
+  z-index: 1000
 
 .menu
   margin: 0
@@ -178,6 +181,10 @@ figure
   color: $color
   font-size: $fmd
   display: block
+
+  &:hover,
+  &--active
+    color: $accent
 
 %inverse-link
   +disable-link-border

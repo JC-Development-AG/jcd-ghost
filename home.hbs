@@ -23,13 +23,13 @@
 </div>
 
 <div class="apps">
-  {{#get "pages" filter="featured:true" include="tags" limit="2"}}
+  {{#get "pages" filter="featured:true" include="tags"}}
     {{#foreach pages}}
       {{> "home-work"}}
     {{/foreach}}
   {{/get}}
 
-  {{#get "posts" filter="featured:true" include="tags" limit="3"}}
+  {{#get "posts" filter="featured:true" include="tags"}}
     {{#foreach posts}}
       {{> "home-work"}}
     {{/foreach}}
