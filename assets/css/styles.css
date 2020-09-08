@@ -313,6 +313,9 @@ object-fit {
     margin-bottom: 64px; }
 
   .header {
-    position: static; } }
+    position: static; }
+
+  .wrapper {
+    padding-top: 0; } }
 
 /*# sourceMappingURL=styles.css.map */
