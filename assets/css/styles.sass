@@ -36,6 +36,7 @@ $space-lg: 64px
 
 $break: 700px
 $max-width: 800px
+$app-radius: 40px
 
 $fxxl: 2.986rem
 $fxl: 2.074rem
@@ -151,6 +152,17 @@ figure
   min-height: calc(100vh - 59px)
   margin: 0 auto
 
+.home-template 
+  .wrapper
+    max-width: 1200px
+  
+.headline-wrapper
+  height: calc(100vh - min(1200px,100vw)*0.25 - #{$fxxl} - 130px)
+
+  .headline
+    top: 200px
+    position: sticky
+
 .header
   position: fixed
   left: 0
@@ -257,9 +269,9 @@ object-fit
 
 .apps
   display: grid
-  grid-template-columns: repeat(3, 1fr)
-  grid-column-gap: $flg
-  grid-row-gap: $flg
+  grid-template-columns: repeat(4, 1fr)
+  grid-column-gap: $fxl
+  grid-row-gap: $fxl
 
   @media (max-width: $break)
     grid-template-columns: repeat(2, 1fr)
@@ -272,18 +284,18 @@ object-fit
 .apps__app__inner
   position: relative
   background-color: $white
-  //border-radius: 40px
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
+  border-radius: $app-radius
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
   transition: 0.2s all linear
 
   &:before
     content: ' '
     display: block
     width: 100%
-    padding-top: 80%
+    padding-top: 100%
 
   &:after
-    //border-radius: 40px
+    border-radius: $app-radius
     position: absolute
     top: 0
     left: 0
@@ -292,15 +304,16 @@ object-fit
     width: 100%
     height: 100%
     background: rgb(255,255,255)
-    background: radial-gradient(circle, rgba(255,255,255,0.19089642693014708) 0%, rgba(0,0,0,0.10126057258841037) 100%)
+    background: radial-gradient(circle, rgba(255,255,255,0.19089642693014708) 0%, rgba(0,0,0,0.29537821964723385) 100%)
+    mix-blend-mode: hard-light
 
   &:hover
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3)
     transform: scale(1.05)
 
 .apps__app__img
   width: 100%
-  //border-radius: 40px
+  border-radius: $app-radius
   display: block
   position: absolute
   top: 0

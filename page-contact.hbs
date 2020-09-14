@@ -8,7 +8,11 @@
 
 {{/post}}
 
-<div id="map" class="mt" style="width: 500px; max-width: 100%; height: 300px"></div>
+<div class="apps">
+  {{> "contact-apps"}}
+</div>
+
+<div id="map" class="mt" style="width: 100%; height: 300px"></div>
 
 <script>
   document.addEventListener('DOMContentLoaded', loadMap, { once: true });

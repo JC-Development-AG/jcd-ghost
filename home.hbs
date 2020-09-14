@@ -17,28 +17,25 @@
 </script>
 <script src="{{asset "/js/object-fit-videos.min.js"}}" defer async onload="objectFitVideos();"></script>
 
-<div class="headline">
-  <h1 class="headline__h1">Sie bauen mit System.</h1>
-  <h2 class="headline__h2">Planen Sie auch mit System.</h2>
+<div class="headline-wrapper">
+  <div class="headline">
+    <h1 class="headline__h1">Sie bauen mit System.</h1>
+    <h2 class="headline__h2">Planen Sie auch mit System.</h2>
+  </div>
 </div>
 
 <div class="apps">
   {{#get "pages" filter="featured:true" include="tags"}}
     {{#foreach pages}}
-      {{> "home-work"}}
+      {{> "app"}}
     {{/foreach}}
   {{/get}}
 
   {{#get "posts" filter="featured:true" include="tags"}}
     {{#foreach posts}}
-      {{> "home-work"}}
+      {{> "app"}}
     {{/foreach}}
   {{/get}}
 
-  <a class="apps__app" href="services.html" data-aos="fade-up">
-    <div class="apps__app__inner">
-      <img src="{{asset "/img/LI-Logo.png"}}" class="apps__app__img apps__app__img--contain" />
-    </div>
-    <div class="apps__app__label">LinkedIn</div>
-  </a>
+  {{> "contact-apps"}}
 </div>

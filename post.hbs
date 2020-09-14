@@ -6,4 +6,29 @@
 
 {{{content}}}
 
+{{#has tag="service"}}
+  {{#get "posts" filter="tags:{{tags.[1].name}}+id:-{{id}}"}}
+    {{#if posts}}
+      <h2>Referenzen</h2>
+      <div class="apps">
+        {{#foreach posts}}
+          {{> "app"}}
+        {{/foreach}}
+      </div>
+    {{/if}}
+  {{/get}}
+{{/has}}
+{{#has tag="work"}}
+  {{#get "posts" filter="tags:{{tags.[1].name}}+id:-{{id}}"}}
+    {{#if posts}}
+      <h2>Mehr zu diesem Thema</h2>
+      <div class="apps">
+        {{#foreach posts}}
+          {{> "app"}}
+        {{/foreach}}
+      </div>
+    {{/if}}
+  {{/get}}
+{{/has}}
+
 {{/post}}
