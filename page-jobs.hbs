@@ -1,0 +1,17 @@
+{{!< default}}
+
+{{#post}}
+
+{{> "post-title"}}
+
+{{{content}}}
+
+<div class="apps">
+  {{#get "posts" filter="primary_tag:job" include="tags"}}
+    {{#foreach posts}}
+      {{> "app"}}
+    {{/foreach}}
+  {{/get}}
+</div>
+
+{{/post}}
